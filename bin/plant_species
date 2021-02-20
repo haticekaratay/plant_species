@@ -1,3 +1,13 @@
 #!/usr/bin/env ruby
 
 require_relative "../lib/plant_species"
+#binding.pry
+#require_relative "../.env"
+
+#puts $(PLANT_SPECIES_TOKEN)
+#puts ENV['PLANT_SPECIES_TOKEN']
+
+
+puts "hello"
+API.get_data
+#binding.pry
