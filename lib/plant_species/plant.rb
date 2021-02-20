@@ -22,5 +22,11 @@ class Plant
         @@all
     end
 
+    def self.list_plants
+        @@all.each.with_index(1) do |plant_object,index|
+            puts "#{index}. #{object.common_name}"
+        end
+    end
+
         
 end
