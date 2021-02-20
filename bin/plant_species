@@ -10,4 +10,6 @@ require_relative "../lib/plant_species"
 
 puts "hello"
 API.get_data
+API.create_plant
+Plant.list_plants
 #binding.pry
