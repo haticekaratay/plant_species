@@ -28,4 +28,17 @@ class Plant
         end
     end
     
+    def self.display_taxonomy(plant_name)
+        taxon = @@all.each do |plant_object|
+            if plant_object.common_name == plant_name
+                puts "The #{plant_object.common_name}, also scientifically known as #{plant_object.scientific_name} was first formally described in #{plant_object.year}. It's taxanomy as following:" 
+                puts "Kingdom: #{plant_object.kingdom}"
+                puts "Family: #{plant_object.family}"
+                puts "Genus: #{plant_object.genus}"
+                puts "Species: #{plant_object.scientific_name}"
+            end
+        end
+        
+    end
+
 end
