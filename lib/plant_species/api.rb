@@ -8,4 +8,16 @@ class API
         @@plants = HTTParty.get(http_url)["data"]   
     end
 
+    def self.create_plant
+        self.get_data.each do |plant_hash|
+           Plant.new(
+               plant_hash["common_name"],
+               plant_hash["scientific_name"],
+               plant_hash["year"],
+               plant_hash["genus"],
+               plant_hash["family"]
+           )
+        end 
+    end
+
 end
