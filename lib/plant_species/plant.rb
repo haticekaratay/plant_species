@@ -22,7 +22,7 @@ class Plant
 
     def self.list_plants
         @@all.each.with_index(1) do |plant_object,index|
-            puts "#{index}. #{plant_object.common_name}"
+            puts "#{index}. #{plant_object.common_name}".blue
         end
     end
 
@@ -31,22 +31,23 @@ class Plant
             if plant_object.common_name == plant_name
                 
                 puts "You selected ==> #{plant_name}"
+                puts
                 puts "The #{plant_object.common_name}, scientifically known as #{plant_object.scientific_name}, was first formally described in #{plant_object.year}. It's taxanomy as following:" 
                 puts 
                 puts " __| |__________________________________________________________| |__ ".green
                 puts "|__   __________________________________________________________   __|".green
                 puts "   | |                                                          | |   ".green
-                puts "        Kingdom ==> #{plant_object.kingdom}                           "
+                puts "        Kingdom ==> #{plant_object.kingdom.bold}                           "
                 puts "   | |                                                          | |   ".green
-                puts "        Family  ==> #{plant_object.family}                            "
+                puts "        Family  ==> #{plant_object.family.bold}                            "
                 puts "   | |                                                          | |   ".green
-                puts "        Genus   ==> #{plant_object.genus}                             "
+                puts "        Genus   ==> #{plant_object.genus.bold}                             "
                 puts "   | |                                                          | |   ".green
-                puts "        Species ==> #{plant_object.scientific_name}                   "
+                puts "        Species ==> #{plant_object.scientific_name.bold}                   "
                 puts " __| |__________________________________________________________| |__ ".green
                 puts "|__   __________________________________________________________   __|".green
                 puts "   | |                                                          | |   ".green
-
+                puts 
 
                 # puts "You selected ==> #{plant_name}"
                 # puts "The #{plant_object.common_name}, scientifically known as #{plant_object.scientific_name}, was first formally described in #{plant_object.year}. It's taxanomy as following:" 

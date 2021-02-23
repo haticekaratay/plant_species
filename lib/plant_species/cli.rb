@@ -8,27 +8,23 @@ class CLI
     end
 
     def self.display_list
-        puts "\n"
+        puts "Here is a list of plants for you to choose from: "
+        puts 
         Plant.list_plants
-        puts "\n"
+        puts 
     end
 
     def self.intro
-        puts "\n"
-        puts "********** Welcome to Plant Taxonomy viewer!**********".green
-        puts "------------------------------------------------------".green
-        puts "Please wait. Loading...."
-        puts "\n"
-        #sleep (2)
-        puts "\n"
-        puts "Here is a list of plant for you to examine. "
+        puts 
+        puts "********** Welcome to Plant Species Taxonomy viewer!**********".green.bold
+        puts "--------------------------------------------------------------".green.bold
+        puts 
+        
     end
 
     def self.main_menu
-        puts "\n"
-        puts "Type a number from the list."
-        puts "           or      "
-        puts "Type 'exit' to quit program!"
+        print "Type a number from the list to learn more about the plant. Or "
+        puts "Type 'exit' to quit the program."
         puts "\n"
         get_user_input
     end
@@ -41,44 +37,36 @@ class CLI
 
     def self.respond_to_user(user_input)
         range = Plant.all.count
-        #index = user_input.to_i - 1
         
-        if user_input == 'exit'
-            bye
-
-        elsif (1..range).include?(user_input.to_i) ##&& user_input.to_i > 0
+        if (1..range).include?(user_input.to_i) 
             display_user_request(user_input)
             puts "Do you want to learn more about another plant? [y/n]"
-            #plant_name = Plant.all[index].common_name
-            #Plant.display_taxonomy(plant_name)
+            puts
             ask_user_again
-        
+
+        elsif user_input.downcase == 'exit'
+            bye
+
         elsif user_input.to_i < 0 || user_input.to_i > range
             puts "Out of range. Select a number from #{1} to #{range}"
             get_user_input
         
         else
-            puts "\n"
             invalid
-            # puts "I don't get that."
-            # puts "See the list again."
-            # Plant.list_plants
-            # get_user_input
         end
     end
 
     def self.bye
-        puts "Thanks for using the app. See you next time!"
-        puts ""
+        puts
+        puts "Thanks for using the app. See you next time!".bold.red
+        puts 
     end
 
     def self.invalid
-        puts "\n"
-            puts "I don't get that."
-            puts "----------------"
-            #puts "Please select a number from the list or type 'exit'"
-            #display_list
-            main_menu
+        puts 
+        puts "Invalid input!".red
+        puts 
+        main_menu
     end
 
 
@@ -89,30 +77,22 @@ class CLI
     end
 
     def self.ask_user_again(user_input = nil)
-        #puts "Do you want to learn more about another plant? [y/n]"
+        
         user_input || user_input = gets.chomp.downcase
-        if user_input == "y"
-            puts "Going back to main menu."
-            puts " Loading....."
-            sleep (2)
-            puts "*****************************"
-            puts "  Let's see the list again:"
-            puts "\n"
+        if user_input.downcase == "y"
+            puts 
+            puts "Let's see the list again:"
+            puts 
             Plant.list_plants
-            puts "\n"
+            puts 
             puts "Enter a number or exit"
-            puts " "
+            puts 
             get_user_input
         
-        elsif user_input == "n"
+        elsif user_input.downcase == "n" || user_input.downcase == "exit"
             bye
         else
-            puts "Invalid input!"
-            puts "Please enter [y/n] or type exit!"
-            
-            input = gets.chomp
-            ask_user_again(input)
-
+            invalid
         end
     end
 
