@@ -15,8 +15,8 @@ class CLI
 
     def self.intro
         puts "\n"
-        puts "********** Welcome to Plant Taxonomy viewer!**********"
-        puts "------------------------------------------------------"
+        puts "********** Welcome to Plant Taxonomy viewer!**********".green
+        puts "------------------------------------------------------".green
         puts "Please wait. Loading...."
         puts "\n"
         #sleep (2)

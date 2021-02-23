@@ -3,6 +3,7 @@ require 'pry'
 
 require 'dotenv'
 Dotenv.load
+require 'colorize'
 
 
 require_relative '../lib/plant_species/api.rb'
