@@ -29,19 +29,36 @@ class Plant
     def self.display_taxonomy(plant_name)
         taxon = @@all.find do |plant_object|
             if plant_object.common_name == plant_name
+                
                 puts "You selected ==> #{plant_name}"
-                puts "______________________________________________________________________________________________________________________"
-                puts " "
                 puts "The #{plant_object.common_name}, scientifically known as #{plant_object.scientific_name}, was first formally described in #{plant_object.year}. It's taxanomy as following:" 
-                puts " "
-                puts "Kingdom ==> #{plant_object.kingdom}"
-                puts " "
-                puts "Family  ==> #{plant_object.family}"
-                puts " "
-                puts "Genus   ==> #{plant_object.genus}"
-                puts ""
-                puts "Species ==> #{plant_object.scientific_name}"
-                puts "_________________________________________________________________________________________________________________________"
+                puts 
+                puts " __| |__________________________________________________________| |__ ".green
+                puts "|__   __________________________________________________________   __|".green
+                puts "   | |                                                          | |   ".green
+                puts "        Kingdom ==> #{plant_object.kingdom}                           "
+                puts "   | |                                                          | |   ".green
+                puts "        Family  ==> #{plant_object.family}                            "
+                puts "   | |                                                          | |   ".green
+                puts "        Genus   ==> #{plant_object.genus}                             "
+                puts "   | |                                                          | |   ".green
+                puts "        Species ==> #{plant_object.scientific_name}                   "
+                puts " __| |__________________________________________________________| |__ ".green
+                puts "|__   __________________________________________________________   __|".green
+                puts "   | |                                                          | |   ".green
+
+
+                # puts "You selected ==> #{plant_name}"
+                # puts "The #{plant_object.common_name}, scientifically known as #{plant_object.scientific_name}, was first formally described in #{plant_object.year}. It's taxanomy as following:" 
+                # puts 
+                # puts "Kingdom ==> #{plant_object.kingdom}"
+                # puts 
+                # puts "Family  ==> #{plant_object.family}"
+                # puts 
+                # puts "Genus   ==> #{plant_object.genus}"
+                # puts 
+                # puts "Species ==> #{plant_object.scientific_name}"
+                # puts 
             end
         end
     end
