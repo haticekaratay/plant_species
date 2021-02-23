@@ -8,3 +8,4 @@ source "https://rubygems.org"
 gem "rake", "~> 13.0"
 gem 'httparty'
 gem 'pry'
+gem 'dotenv', '~> 2.1', '>= 2.1.1'
