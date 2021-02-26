@@ -73,7 +73,7 @@ class CLI
     end
 
 
-    def self.display_user_request(user_input)``
+    def self.display_user_request(user_input)
         index = user_input.to_i - 1
         plant_name = Plant.all[index].common_name
         Plant.display_taxonomy(plant_name)
