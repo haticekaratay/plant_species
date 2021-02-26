@@ -4,7 +4,7 @@ class CLI
         intro
         display_list
         main_menu
-        
+        get_user_input
     end
 
     def self.display_list
@@ -26,10 +26,11 @@ class CLI
         print "Type a number from the list to learn more about the plant. Or "
         puts "Type 'exit' to quit the program."
         puts "\n"
-        get_user_input
+    
     end
 
     def self.get_user_input
+        puts " "
         user_input = gets.chomp
         puts " "
         respond_to_user(user_input)
@@ -40,7 +41,7 @@ class CLI
         
         if (1..range).include?(user_input.to_i) 
             display_user_request(user_input)
-            puts "Do you want to learn more about another plant? [y/n]"
+            puts "Do you want to learn more about another plant? [y/n/exit]"
             puts
             ask_user_again
 
@@ -53,6 +54,8 @@ class CLI
         
         else
             invalid
+            main_menu
+            get_user_input
         end
     end
 
@@ -66,11 +69,11 @@ class CLI
         puts 
         puts "Invalid input!".red
         puts 
-        main_menu
+       
     end
 
 
-    def self.display_user_request(user_input)
+    def self.display_user_request(user_input)``
         index = user_input.to_i - 1
         plant_name = Plant.all[index].common_name
         Plant.display_taxonomy(plant_name)
@@ -93,6 +96,9 @@ class CLI
             bye
         else
             invalid
+            puts "Please enter [y/n] or type exit!"
+            input = gets.chomp
+            ask_user_again(input)
         end
     end
 

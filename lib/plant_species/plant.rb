@@ -32,7 +32,7 @@ class Plant
                 
                 puts "You selected ==> #{plant_name}"
                 puts
-                puts "The #{plant_object.common_name}, scientifically known as #{plant_object.scientific_name}, was first formally described in #{plant_object.year}. It's taxanomy as following:" 
+                puts "The #{plant_object.common_name}, scientifically known as #{plant_object.scientific_name}, was first formally described in #{plant_object.year}. It's taxonomy as following:" 
                 puts 
                 puts " __| |__________________________________________________________| |__ ".green
                 puts "|__   __________________________________________________________   __|".green
@@ -49,17 +49,6 @@ class Plant
                 puts "   | |                                                          | |   ".green
                 puts 
 
-                # puts "You selected ==> #{plant_name}"
-                # puts "The #{plant_object.common_name}, scientifically known as #{plant_object.scientific_name}, was first formally described in #{plant_object.year}. It's taxanomy as following:" 
-                # puts 
-                # puts "Kingdom ==> #{plant_object.kingdom}"
-                # puts 
-                # puts "Family  ==> #{plant_object.family}"
-                # puts 
-                # puts "Genus   ==> #{plant_object.genus}"
-                # puts 
-                # puts "Species ==> #{plant_object.scientific_name}"
-                # puts 
             end
         end
     end
