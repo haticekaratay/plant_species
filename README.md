@@ -1,6 +1,10 @@
 # PlantSpecies
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/plant_species`. To experiment with that code, run `bin/console` for an interactive prompt.
+Welcome to your plant_species gem! This gem will get you taxonomy of a plant with its complete Kingdom, Family, Genus and Species.
+
+To interact with this gem you first need to obtain a token from trefle.io api site. It is free website that just requiring you to sign to access their data.
+
+In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/plant_species`. To experiment with that code, run `bin/console` for an interactive prompt.
 
 TODO: Delete this and the text above, and describe your gem
 
