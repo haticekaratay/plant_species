@@ -6,20 +6,21 @@ Welcome to your plant_species gem! This gem will get you taxonomy of a plant wit
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'plant_species'
+gem 'plant_species', :git => "https://github.com/haticekaratay/plant_species" 
 ```
+Then 
+```ruby
+    require 'plant_species'
+```
+in your environment file.
 
-And then execute:
+Then run ./bin/plant_species in your terminal.
 
-    $ bundle install
-
-Or install it yourself as:
-
-    $ gem install plant_species
-
+Also you can access this gem through GitHub link https://github.com/haticekaratay/plant_species by forking the repo.
 ## Usage
 
 To interact with this gem you first need to obtain a token from trefle.io api site. It is free website that just requiring you to sign to access their data.
+https://trefle.io/
 
 ## Development
 
