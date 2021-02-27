@@ -1,9 +1,6 @@
 # PlantSpecies
 
 Welcome to your plant_species gem! This gem will get you taxonomy of a plant with its complete Kingdom, Family, Genus and Species.
-
-In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/plant_species`. To experiment with that code, run `./bin/plant_species` for an interactive prompt.
-
 ## Installation
 
 Add this line to your application's Gemfile:

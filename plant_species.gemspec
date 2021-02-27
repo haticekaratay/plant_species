@@ -5,12 +5,12 @@ require_relative "lib/plant_species/version"
 Gem::Specification.new do |spec|
   spec.name          = "plant_species"
   spec.version       = PlantSpecies::VERSION
-  spec.authors       = ["Hatice"]
+  spec.authors       = ["Hatice Karatay"]
   spec.email         = ["haticekaraty@gmail.com"]
 
-  spec.summary       = "TODO: Write a short summary, because RubyGems requires one."
+  spec.summary       = "This gem will get you taxonomy of a plant with its complete Kingdom, Family, Genus and Species."
   spec.description   = "TODO: Write a longer description or delete this line."
-  spec.homepage      = "TODO: Put your gem's website or public repo URL here."
+  spec.homepage      = "https://github.com/haticekaratay/plant_species"
   spec.license       = "MIT"
   spec.required_ruby_version = Gem::Requirement.new(">= 2.3.0")
 
@@ -29,8 +29,14 @@ Gem::Specification.new do |spec|
   spec.executables   = spec.files.grep(%r{\Aexe/}) { |f| File.basename(f) }
   spec.require_paths = ["lib"]
 
-  # Uncomment to register a new dependency of your gem
-  # spec.add_dependency "example-gem", "~> 1.0"
+  
+  spec.add_dependency "rake", "~> 13.0"
+  spec.add_dependency "httparty"
+  spec.add_dependency "pry"
+  spec.add_dependency 'dotenv', '~> 2.1', '>= 2.1.1'
+  spec.add_dependency "colorize"
+
+
 
   # For more information and examples about making a new gem, checkout our
   # guide at: https://bundler.io/guides/creating_gem.html
