@@ -38,7 +38,7 @@ class CLI
 
     def self.respond_to_user(user_input)
         range = Plant.all.count
-        
+
         if (1..range).include?(user_input.to_i) 
             display_user_request(user_input)
             puts "Do you want to learn more about another plant? [y/n/exit]"

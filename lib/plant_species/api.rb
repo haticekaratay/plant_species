@@ -1,5 +1,6 @@
 class API
 
+    #returns an array including hashes of all plants from the API.
     def self.get_data
         token = ENV["PLANT_SPECIES_TOKEN"]
         http_url = "https://trefle.io/api/v1/plants?token=#{token}"
