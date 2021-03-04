@@ -21,13 +21,13 @@ class Plant
     end
 
     def self.list_plants
-        @@all.each.with_index(1) do |plant_object,index|
+        self.all.each.with_index(1) do |plant_object,index|
             puts "#{index}. #{plant_object.common_name}".blue
         end
     end
 
     def self.display_taxonomy(plant_name)
-        taxon = @@all.find do |plant_object|
+        @@taxonomy = self.all.find do |plant_object|
             if plant_object.common_name == plant_name
                 
                 puts "You selected ==> #{plant_name}"
