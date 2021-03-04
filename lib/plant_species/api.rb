@@ -4,7 +4,7 @@ class API
     def self.get_data
         token = ENV["PLANT_SPECIES_TOKEN"]
         http_url = "https://trefle.io/api/v1/plants?token=#{token}"
-        @@plants = HTTParty.get(http_url)["data"]   
+        HTTParty.get(http_url)["data"]   
     end
 
     
