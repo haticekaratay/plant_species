@@ -47,8 +47,9 @@ class CLI
 
         elsif user_input.downcase == 'exit'
             bye
+        
 
-        elsif user_input.to_i <= 0 || user_input.to_i > range
+        elsif user_input.to_i < 0 || user_input.to_i > range || user_input == "0"
             puts "Out of range. Select a number from #{1} to #{range}"
             get_user_input
         
